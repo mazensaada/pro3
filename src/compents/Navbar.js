@@ -10,8 +10,14 @@ const Navbar = (props) => {
        <input type="text"
        onChange={(e)=>props.setText(e.target.value)}
        placheloder="Rechercher">
-       </input>      
-       </div>
+       </input>
+       <div className='log'>
+        <h3>HOME</h3>
+        <h3>ABOUT</h3>
+        <h3>MOVIES</h3>
+        <h3>SERIES</h3>
+         </div>      
+         </div>
           </div>
   )
 }

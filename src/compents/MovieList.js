@@ -1,29 +1,19 @@
-import React from "react";
+import React from 'react'
+import MovieCard from "./MovieCard";
 
-const MovieList = ({ List, text }) => {
-  console.log(List);
+function MovieList({movies, text}) {
   return (
-    <div className="main-container">
-      {List?.filter((el) =>
-        el.name.toLowerCase().includes(text.toLowerCase())
-      ).map((el, i) => (
-        <div>
-          <div key={i} className="movie-card">
-            <div className="movie-poster">
-              <img src={el.posterurl} alt="poster" />
-            </div>
-            <div className="movie-details">
-              <h1>{el.name}</h1>
-              <p>{el.description}</p>
-            </div>
-            <div className="movie-rating">
-              <p> Rating: {el.rating}/10</p>
-            </div>
-          </div>
-        </div>
-      ))}
+    <div>
+      {movies
+        .filter((val) => val?.name?.toLowerCase().includes(text.toLowerCase()))
+        .map((el) => (
+          <MovieCard movie={el} />
+        ))}
+         
+       
+       
     </div>
   );
-};
+}
 
-export default MovieList;
+export default MovieList

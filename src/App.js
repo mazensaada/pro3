@@ -6,7 +6,7 @@ import Navbar from './compents/Navbar';
 
 function App() {
   const [text, setText] = useState("")
-const [movie,setMovie]=useState(
+const [movies,setMovie]=useState(
   [{
     name: "beasts of no nation",
     posterurl:
@@ -117,7 +117,7 @@ const [movie,setMovie]=useState(
    <div>
 
     <Navbar setText={setText}/>
-     <MovieList List={movie} text={text}/>
+     <MovieList movies={movies} text={text}/>
     </div>
   );
 }

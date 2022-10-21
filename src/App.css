@@ -22,6 +22,11 @@
   display: flex;
   justify-content: flex-start;
 }
+.log{
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 150;
+}
 .movie-card{
   display: flex;
  flex-wrap: wrap;
@@ -54,4 +59,11 @@
   display: flex;
   flex-wrap: wrap;
   background-color: crimson;
+}
+.log{
+
+  align-content: space-between;
+  flex-wrap: wrap;
+  width: 100px;
+  height: 20;
 }
